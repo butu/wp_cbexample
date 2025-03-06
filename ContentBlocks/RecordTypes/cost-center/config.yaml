@@ -1,0 +1,16 @@
+name: wp-cbexample/cost-center
+table: tx_wpcbexample_domain_model_costcenter
+prefixFields: false
+labelField:
+  - title
+security:
+  ignorePageTypeRestriction: true
+fields:
+  - identifier: title
+    type: Text
+    label: 'Baustellenname'
+    required: true
+  - identifier: id
+    type: Number
+    label: 'uid'
+    required: true

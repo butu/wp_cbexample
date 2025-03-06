@@ -1,0 +1,10 @@
+name: wp-cbexample/location
+table: tx_wpcbexample_domain_model_location
+prefixFields: false
+labelField: title
+security:
+  ignorePageTypeRestriction: true
+fields:
+  - identifier: title
+    type: Text
+    label: Ortsname

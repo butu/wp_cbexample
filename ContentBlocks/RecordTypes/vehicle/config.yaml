@@ -1,0 +1,13 @@
+name: wp-cbexample/vehicle
+table: tx_wpcbexample_domain_model_vehicle
+prefixFields: false
+labelField: car_number
+security:
+  ignorePageTypeRestriction: true
+fields:
+  - identifier: car_number
+    type: Text
+    label: Fahrzeugnummer
+    min: 3
+    max: 4
+    required: true

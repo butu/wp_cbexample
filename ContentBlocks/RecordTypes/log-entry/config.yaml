@@ -1,0 +1,75 @@
+name: wp-cbexample/log-entry
+table: tx_wpcbexample_domain_model_logentry
+prefixFields: false
+labelField: departure_location
+security:
+  ignorePageTypeRestriction: true
+fields:
+  - identifier: vehicle
+    type: Select
+    label: 'Fahrzeug'
+    foreign_table: tx_wpcbexample_domain_model_vehicle
+    foreign_table_where: 'ORDER BY car_number'
+    renderType: selectSingle
+    minitems: 1
+    maxitems: 1
+  - identifier: cost_center
+    type: Select
+    label: 'Kostenstelle'
+    description: 'Auf welcher Kostenstelle wird die Fahrt abgerechnet?'
+    foreign_table: tx_wpcbexample_domain_model_costcenter
+    foreign_table_where: 'ORDER BY title'
+    renderType: selectSingle
+  - identifier: user
+    type: Select
+    label: 'Benutzer'
+    foreign_table: fe_users
+    renderType: selectSingle
+  - identifier: date
+    type: DateTime
+    label: 'Datum der Fahrt'
+    format: date
+    dbType: date
+    required: true
+  - identifier: departure_time
+    type: DateTime
+    label: 'Abfahrt Zeit'
+    format: time
+    dbType: time
+    required: true
+  - identifier: arrival_time
+    type: DateTime
+    label: 'Ankunft Zeit'
+    format: time
+    dbType: time
+    required: true
+  - identifier: departure_mileage
+    type: Number
+    label: 'Abfahrt Kilometerstand'
+    required: true
+  - identifier: arrival_mileage
+    type: Number
+    label: 'Ankunft Kilometerstand'
+    required: true
+  - identifier: departure_location
+    type: Text
+    label: 'Abfahrt Ort'
+    required: true
+  - identifier: locations
+    type: Collection
+    label: 'Über'
+    foreign_table: tx_wpcbexample_domain_model_location
+    shareAcrossTables: true
+    shareAcrossFields: true
+  - identifier: arrival_location
+    type: Text
+    label: 'Ankunft Ort'
+    required: true
+  - identifier: purpose
+    type: SelectNumber
+    label: 'Zweck der Fahrt'
+    items:
+      - label: 'Botendienst'
+        value: 1
+      - label: 'Zweck 2'
+        value: 2

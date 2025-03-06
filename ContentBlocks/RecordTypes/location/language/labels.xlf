@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-03-04T15:55:46+00:00" product-name="wp-cbexample/location">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="title.label">
+				<source>Ortsname</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

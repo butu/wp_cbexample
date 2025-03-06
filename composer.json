@@ -1,0 +1,22 @@
+{
+  "name": "webprofil/wp-cbexample",
+  "description": "An extension that uses content blocks for the tca and sql",
+  "type": "typo3-cms-extension",
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "require": {
+    "typo3/cms-core": "^13.0",
+    "friendsoftypo3/content-blocks": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "WEBprofil\\WpCbexample\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "wp_cbexample"
+    }
+  }
+}
